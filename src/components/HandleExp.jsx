@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import calcOutput from '../utils/calcOutput';
 import DisplayResult from './DisplayResult';
 
-export default () => {
+export default (props) => {
     const [A, setA ] = useState("false");
     const [B, setB ] = useState("false");
     const [C, setC ] = useState("false");
@@ -12,8 +12,9 @@ export default () => {
     const [result, setResult] = useState({});
 
     const handleSubmit = (event) => {
+      console.log(props)
       event.preventDefault();
-      setResult(calcOutput(A, B, C, D, E, F));
+      setResult(calcOutput(A, B, C, D, E, F, props.SetRules));
     }
     
     return (
