@@ -9,7 +9,7 @@ export default () => {
     const [D, setD ] = useState(0);
     const [E, setE ] = useState(0);
     const [F, setF ] = useState(0);
-    const [result, setResult] = useState(0);
+    const [result, setResult] = useState({});
 
     const handleSubmit = (event) => {
       event.preventDefault();

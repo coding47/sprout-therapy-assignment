@@ -4,7 +4,8 @@ export default (props) => {
   return(
     <section>
       <h2>Result</h2>
-      <p>{props.Result}</p>
+      <p>H: {props.Result.H}</p>
+      <p>K: {props.Result.K}</p>
     </section>
   )
 }
