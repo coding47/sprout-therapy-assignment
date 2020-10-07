@@ -12,7 +12,6 @@ export default (props) => {
     const [result, setResult] = useState({});
 
     const handleSubmit = (event) => {
-      console.log(props)
       event.preventDefault();
       setResult(calcOutput(A, B, C, D, E, F, props.SetRules));
     }

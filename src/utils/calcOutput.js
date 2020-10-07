@@ -10,7 +10,7 @@ export default (A, B, C, D, E, F, rules) => {
           return "M";
         } else if (A === "true" && B === "true" && C === "true") {
           return "P";
-        } else if (A === "false" && B === "true" && C === "false") {
+        } else if (A === "false" && B === "true" && C === "true") {
           return "T";
         } else {
           throw new Error("Invalid values");
@@ -19,9 +19,9 @@ export default (A, B, C, D, E, F, rules) => {
 
     const returnK = (D, E, F, H) => {
       if (H === "M") {
-        return D + (D * E / 10);
+        return rules === 2 ? F + D + (D * E / 100) : D + (D * E / 10); // Custom set of rules overrides return value
       } else if (H === "P") {
-        return rules === 1 ? 2 * D + (D * E / 100) : D + (D * (E - F) / 25.5) // Custom set of rules overrides return value
+        return rules === 1 ? 2 * D + (D * E / 100) : D + (D * (E - F) / 25.5); // Custom set of rules overrides return value
       } else if (H === "T") {
         return D - (D * F / 30);
       } else {
