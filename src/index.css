@@ -1,0 +1,22 @@
+input {
+    margin: 5px;
+}
+
+button, input[type=submit] {
+    margin: 5px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+main {
+    max-width: 800px;
+    margin: 50px auto 0;
+}
+
+label {
+    margin: 0 10px;
+}
+
+fieldset {
+    padding: 20px;
+}

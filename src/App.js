@@ -1,6 +1,10 @@
 import React, {useState} from 'react';
 import HandleExp from './components/HandleExp';
-import './App.css';
+import Typography from 'typography'
+import altonTheme from 'typography-theme-alton'
+
+const typography = new Typography(altonTheme);
+typography.injectStyles()
 
 function App() {
   const [rules, setRules] = useState(0)
